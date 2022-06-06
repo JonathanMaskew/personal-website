@@ -10,7 +10,7 @@ export default class Navigation extends Component<Props, State> {
 
     render() {
         return (
-            <nav className='py-4 border-b-2 border-themeOrange mx-8 mb-20'>
+            <nav className='py-4 border-b-2 border-themeOrange mb-20'>
                 <div className='flex flex-wrap items-end justify-between mx-6'>
                     <div>Jonathan Maskew</div>
 
