@@ -8,7 +8,10 @@ const Home: NextPage = () => {
   return (
     <div>
       <Navigation />
-      <p className='text-3xl'><span className='text-themeOrange'>Welcome!</span> Glad you're here.</p>
+      <div className='text-5xl text-center'><span className='text-themeOrange'>Welcome!</span><br />Glad you're here.</div>
+      <div className='flex'>
+        <div>I'm Jonathan Maskew.</div>
+      </div>
     </div>
   )
 }

@@ -7,6 +7,10 @@ module.exports = {
     extend: {
       colors: {
         'themeOrange' : '#F56524'
+      },
+
+      borderWidth: {
+        '3' : '3px'
       }
     },
   },
