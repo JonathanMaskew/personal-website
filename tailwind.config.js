@@ -6,7 +6,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'themeOrange' : '#F56524'
+        'themeOrange' : '#F56524',
+        'backgroundOrange' : '#FDE6DC'
       },
 
       borderWidth: {

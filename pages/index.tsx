@@ -1,29 +1,32 @@
 import type { NextPage } from 'next'
-import Head from 'next/head'
 import Image from 'next/image'
-import styles from '../styles/Home.module.css'
-import Navigation from '../components/navigation'
 import headshotImage from '../images/Headshot.jpeg'
+import Link from 'next/link'
+import TimelineEntry from '../components/timelineEntry'
 
 const Home: NextPage = () => {
   return (
-    <div>
-      <Navigation />
-      <div className='text-5xl text-center mb-20'>
+    <div className='mx-32'>
+      <div className='flex flex-col text-5xl text-center my-20'>
         <span className='text-themeOrange'>Welcome!</span>
-        <br />
         Glad you're here.
       </div>
-      <div className='flex'>
-        <Image src={headshotImage} alt='Picture of Jonathan Maskew' className='rounded-full' width={363.3} height={363.6}></Image>
-        <div>
-          <span className='text-themeOrange text-2xl'>I'm Jonathan Maskew.</span>
-          <br />
-          I'm a junior at Purdue University majoring in Computer Science. This is my personal website to showcase and document stuff about me
-          <br />
-          Any current or recent Projects, Involvement, Achievements, Courses, etc. will be featured right here on the homepage. Navigating to the respective pages will include everything.
+      <div className='flex gap-x-0 rounded-full p-4 bg-backgroundOrange mb-20'>
+        <div className='my-auto p-0 max-w-[178px]'><Image src={headshotImage} alt='Picture of Jonathan Maskew' className='rounded-full'></Image></div>
+        <div className='flex flex-col gap-y-4 mr-24 ml-10 w-[4000px]'>
+          <div className='flex flex-col'>
+            <span className='text-themeOrange text-2xl'><span className='text-black'>My name is</span> Jonathan Maskew<span className='text-black'>.</span></span>
+            <span className='text-themeOrange text-2xl'><span className='text-black'>I'm a</span> Computer Science <span className='text-black'> major at</span> Purdue University<span className='text-black'>.</span></span>
+          </div>
+          <div>
+            This is my personal website to showcase and document stuff about me.
+            This site is meant to serve as a timeline of my life and can be filtered by time or event.
+          </div>
+          <button className='bg-themeOrange text-backgroundOrange py-2 rounded-full w-56'><Link href='/about'>Learn more about me...</Link></button>
         </div>
       </div>
+
+      <TimelineEntry />
     </div>
   )
 }
